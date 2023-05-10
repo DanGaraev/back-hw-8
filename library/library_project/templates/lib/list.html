@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book list</title>
+</head>
+<body>
+
+<h1>{{ title }}</h1>
+<!--для функ.вьюхи-->
+<!--{ for item in books }-->
+<!--для клас.вьюхи-->
+{% for item in object_list %}
+    <div>
+        <p>{{ item.title }}</p>
+        <p>{{ item.description }}</p>
+        {% if user == 'dan' %}
+        <p>{{ item.author }}</p>
+        {% endif %}
+        <p>{{ item.created_at }}</p>
+    </div>
+    <hr>
+{% endfor %}
+
+</body>
+</html>
